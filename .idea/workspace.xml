@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a14deb0-f128-457f-a83d-a43b82e53318" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/input/CsvSalesReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/SalesReporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/CsvSalesReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,10 +44,42 @@
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/KANISHKA DILSHAN/Desktop/sft con project/Sales-Report-Generator/src/Main.java&quot;
   }
 }</component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/USER/OneDrive - University of Kelaniya/Desktop/SC Project/Sales-Report-Generator/src/input",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/KANISHKA DILSHAN/Desktop/sft con project/Sales-Report-Generator/src/Main.java",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\OneDrive - University of Kelaniya\Desktop\SC Project\Sales-Report-Generator\src\input" />
+      <recent name="C:\Users\USER\OneDrive - University of Kelaniya\Desktop\SC Project\Sales-Report-Generator" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\OneDrive - University of Kelaniya\Desktop\SC Project\Sales-Report-Generator\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-IU-253.28294.334" />
       </set>
     </attachedChunks>
   </component>
@@ -55,7 +90,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1787648655433</updated>
+      <workItem from="1787652593371" duration="1207000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
