@@ -11,11 +11,13 @@ public class CsvSalesReader  {
 
     public List<Product> readData(String filePath) throws Exception {
         List<Product> products = new ArrayList<>();
-        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line = br.readLine(); // Skip header
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
-
+                if (values.length < 5) {
+                    throw new IllegalArgumentException("Invalid row detected: missing columns.");
+                }
                 products.add(new Product(
                         values[0].trim(),
                         values[1].trim(),
@@ -24,7 +26,7 @@ public class CsvSalesReader  {
                         Double.parseDouble(values[4].trim())
                 ));
             }
-
+        }
         return products;
     }
 }
