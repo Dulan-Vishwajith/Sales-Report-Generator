@@ -9,6 +9,7 @@ import operations.SalesAnalyzer;
 import output.ConsoleOutputStrategy;
 import output.FileOutputStrategy;
 import output.OutputStrategy;
+import output.OutputStrategyFactory;
 
 import java.util.List;
 
@@ -37,15 +38,11 @@ public class SalesReporter {
             String reportContent = ReportFormatter.generateReport(products, analyzer);
 
             // 4. Output Data using Factory
-            if (arguments.getOutputMethod().equalsIgnoreCase("console")) {
-                OutputStrategy strategy = new ConsoleOutputStrategy() ;
-                strategy.output(reportContent,arguments.getOutputFilePath());
+            OutputStrategy strategy = OutputStrategyFactory.getStrategy(arguments.getOutputMethod());
 
-            } else if (arguments.getOutputMethod().equalsIgnoreCase("file")) {
-                OutputStrategy strategy = new FileOutputStrategy();
-                strategy.output(reportContent, arguments.getOutputFilePath());
+            strategy.output(reportContent,arguments.getOutputFilePath());
 
-            }
+
 
         } catch (Exception e){
             System.err.println("Error generating report: " + e.getMessage());
