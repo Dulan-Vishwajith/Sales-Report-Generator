@@ -22,27 +22,31 @@ public class SalesReporter {
         String outputMethod = args[1];
         String outputFilePath = (args.length > 2) ? args[2] : null;
 
+        try{
+            // 1. Read Data
+            CsvSalesReader reader = new CsvSalesReader();
+            List<Product> products = reader.readData(csvFilePath);
 
-        // 1. Read Data
-        CsvSalesReader reader = new CsvSalesReader();
-        List<Product> products = reader.readData(csvFilePath);
+            // 2. Analyze Data
+            SalesAnalyzer analyzer = new SalesAnalyzer(products);
 
-        // 2. Analyze Data
-        SalesAnalyzer analyzer = new SalesAnalyzer(products);
+            // 3. Format Report
+            String reportContent = ReportFormatter.generateReport(products, analyzer);
 
-        // 3. Format Report
-        String reportContent = ReportFormatter.generateReport(products, analyzer);
+            // 4. Output Data using Factory
+            if (outputMethod.equalsIgnoreCase("console")) {
+                ConsoleOutputStrategy strateg = new ConsoleOutputStrategy() ;
+                strateg.output(reportContent, outputFilePath);
 
-        // 4. Output Data using Factory
-        if (outputMethod.equalsIgnoreCase("console")) {
-            ConsoleOutputStrategy strateg = new ConsoleOutputStrategy() ;
-            strateg.output(reportContent, outputFilePath);
+            } else if (outputMethod.equalsIgnoreCase("file")) {
+                FileOutputStrategy strateg = new FileOutputStrategy();
+                strateg.output(reportContent, outputFilePath);
 
-        } else if (outputMethod.equalsIgnoreCase("file")) {
-            FileOutputStrategy strateg = new FileOutputStrategy();
-            strateg.output(reportContent, outputFilePath);
+            }
 
+        } catch (Exception e){
+            System.err.println("Error generating report: " + e.getMessage());
+            System.exit(1);
         }
-
     }
 }
