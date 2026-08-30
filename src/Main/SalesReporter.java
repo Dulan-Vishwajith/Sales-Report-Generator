@@ -8,6 +8,7 @@ import model.Product;
 import operations.SalesAnalyzer;
 import output.ConsoleOutputStrategy;
 import output.FileOutputStrategy;
+import output.OutputStrategy;
 
 import java.util.List;
 
@@ -37,12 +38,12 @@ public class SalesReporter {
 
             // 4. Output Data using Factory
             if (arguments.getOutputMethod().equalsIgnoreCase("console")) {
-                ConsoleOutputStrategy strateg = new ConsoleOutputStrategy() ;
-                strateg.output(reportContent);
+                OutputStrategy strategy = new ConsoleOutputStrategy() ;
+                strategy.output(reportContent,arguments.getOutputFilePath());
 
             } else if (arguments.getOutputMethod().equalsIgnoreCase("file")) {
-                FileOutputStrategy strateg = new FileOutputStrategy();
-                strateg.output(reportContent, arguments.getOutputFilePath());
+                OutputStrategy strategy = new FileOutputStrategy();
+                strategy.output(reportContent, arguments.getOutputFilePath());
 
             }
 

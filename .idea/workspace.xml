@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a14deb0-f128-457f-a83d-a43b82e53318" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/formatters/ReportFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/output/OutputStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/SalesReporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/SalesReporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output/ConsoleOutputStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/output/ConsoleOutputStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output/FileOutputStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/output/FileOutputStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Member1-23/006&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/KANISHKA DILSHAN/Desktop/sft con project/Sales-Report-Generator/src/Main.java&quot;
-  }
-}</component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.SalesReporter.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "member3-23/038",
+    "git-widget-placeholder": "member2-23/015",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Induwara/OneDrive/Desktop/Sales Report/Sales-Report-Generator",
@@ -69,6 +62,22 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USER\OneDrive - University of Kelaniya\Desktop\SC Project\Sales-Report-Generator\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SalesReporter" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.SalesReporter" />
+      <module name="Sales-Report-Generator" />
+      <option name="PROGRAM_PARAMETERS" value="data/sales.csv console" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
