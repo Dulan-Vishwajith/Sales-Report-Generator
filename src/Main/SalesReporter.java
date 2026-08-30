@@ -1,5 +1,6 @@
 package Main;
 
+import cli.CommandLineArguments;
 import formatters.ReportFormatter;
 import input.CsvSalesReader;
 import model.Product;
@@ -18,14 +19,14 @@ public class SalesReporter {
             System.exit(1);
         }
 
-        String csvFilePath = args[0];
-        String outputMethod = args[1];
-        String outputFilePath = (args.length > 2) ? args[2] : null;
+        //
+        CommandLineArguments arguments = CommandLineArguments.parseArg(args);
+
 
         try{
             // 1. Read Data
             CsvSalesReader reader = new CsvSalesReader();
-            List<Product> products = reader.readData(csvFilePath);
+            List<Product> products = reader.readData(arguments.getCsvFilePath());
 
             // 2. Analyze Data
             SalesAnalyzer analyzer = new SalesAnalyzer(products);
@@ -34,13 +35,13 @@ public class SalesReporter {
             String reportContent = ReportFormatter.generateReport(products, analyzer);
 
             // 4. Output Data using Factory
-            if (outputMethod.equalsIgnoreCase("console")) {
+            if (arguments.getOutputMethod().equalsIgnoreCase("console")) {
                 ConsoleOutputStrategy strateg = new ConsoleOutputStrategy() ;
-                strateg.output(reportContent, outputFilePath);
+                strateg.output(reportContent);
 
-            } else if (outputMethod.equalsIgnoreCase("file")) {
+            } else if (arguments.getOutputMethod().equalsIgnoreCase("file")) {
                 FileOutputStrategy strateg = new FileOutputStrategy();
-                strateg.output(reportContent, outputFilePath);
+                strateg.output(reportContent, arguments.getOutputFilePath());
 
             }
 
