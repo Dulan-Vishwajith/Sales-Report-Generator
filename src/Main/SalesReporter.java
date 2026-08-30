@@ -6,8 +6,6 @@ import input.CsvSalesReader;
 import input.SalesReader;
 import model.Product;
 import operations.SalesAnalyzer;
-import output.ConsoleOutputStrategy;
-import output.FileOutputStrategy;
 import output.OutputStrategy;
 import output.OutputStrategyFactory;
 
