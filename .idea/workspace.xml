@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a14deb0-f128-457f-a83d-a43b82e53318" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/output/OutputStrategyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/SalesReporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/SalesReporter.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a14deb0-f128-457f-a83d-a43b82e53318" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +61,7 @@
     <configuration name="SalesReporter" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.SalesReporter" />
       <module name="Sales-Report-Generator" />
-      <option name="PROGRAM_PARAMETERS" value="data/sales.csv file data/output.csv" />
+      <option name="PROGRAM_PARAMETERS" value="data/sales.csv console" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
