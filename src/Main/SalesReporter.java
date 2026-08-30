@@ -3,6 +3,7 @@ package Main;
 import cli.CommandLineArguments;
 import formatters.ReportFormatter;
 import input.CsvSalesReader;
+import input.SalesReader;
 import model.Product;
 import operations.SalesAnalyzer;
 import output.ConsoleOutputStrategy;
@@ -25,7 +26,7 @@ public class SalesReporter {
 
         try{
             // 1. Read Data
-            CsvSalesReader reader = new CsvSalesReader();
+            SalesReader reader = new CsvSalesReader();
             List<Product> products = reader.readData(arguments.getCsvFilePath());
 
             // 2. Analyze Data
