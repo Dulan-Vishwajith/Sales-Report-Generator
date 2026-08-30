@@ -7,9 +7,11 @@ import java.util.List;
 import model.Product;
 
 
-public class CsvSalesReader  {
+public class CsvSalesReader implements SalesReader {
 
+    @Override
     public List<Product> readData(String filePath) throws Exception {
+
         List<Product> products = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line = br.readLine(); // Skip header

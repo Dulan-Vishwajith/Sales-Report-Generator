@@ -3,7 +3,7 @@ package output;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileOutputStrategy {
+public class FileOutputStrategy implements OutputStrategy {
 
     public void output(String reportContent, String filePath) throws IOException {
         if (filePath == null || filePath.isEmpty()) {
