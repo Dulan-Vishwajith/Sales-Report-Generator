@@ -7,6 +7,6 @@ public class OutputStrategyFactory {
         } else if (method.equalsIgnoreCase("file")) {
             return new FileOutputStrategy();
         }
-         return null;
+        throw new IllegalArgumentException("Invalid output method. Use 'console' or 'file'.");
     }
 }

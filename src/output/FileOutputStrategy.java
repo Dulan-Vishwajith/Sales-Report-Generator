@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileOutputStrategy implements OutputStrategy {
-
+    @Override
     public void output(String reportContent, String filePath) throws IOException {
         if (filePath == null || filePath.isEmpty()) {
             throw new IllegalArgumentException("File path is required for file output method.");
