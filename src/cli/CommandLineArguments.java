@@ -1,11 +1,16 @@
 package cli;
 
 public class CommandLineArguments {
+
     private final String csvFilePath;
     private final String outputMethod;
     private final String outputFilePath;
 
-    private CommandLineArguments(String csvFilePath,String outputMethod,String outputFilePath){
+    private CommandLineArguments(
+            String csvFilePath,
+            String outputMethod,
+            String outputFilePath) {
+
         this.csvFilePath = csvFilePath;
         this.outputMethod = outputMethod;
         this.outputFilePath = outputFilePath;
@@ -13,7 +18,18 @@ public class CommandLineArguments {
 
     public static CommandLineArguments parseArg(String[] args) {
 
-        return new CommandLineArguments(args[0],args[1],args.length > 2 ? args[2] : null);
+        if (args.length < 2) {
+            throw new IllegalArgumentException(
+                    "Usage: java SalesReporter " +
+                            "<csv-file-path> <output-method> [output-file-path]"
+            );
+        }
+
+        return new CommandLineArguments(
+                args[0],
+                args[1],
+                args.length > 2 ? args[2] : null
+        );
     }
 
     public String getCsvFilePath() {
