@@ -13,16 +13,10 @@ import java.util.List;
 
 
 public class SalesReporter {
+
     public static void main(String[] args) {
-        // Validate command-line arguments
-        if (args.length < 2) {
-            System.err.println("Usage: java SalesReporter <csv-file-path> <output-method> [output-file-path]");
-            System.exit(1);
-        }
 
-        //
         CommandLineArguments arguments = CommandLineArguments.parseArg(args);
-
 
         try{
             // 1. Read Data
@@ -33,14 +27,12 @@ public class SalesReporter {
             SalesAnalyzer analyzer = new SalesAnalyzer(products);
 
             // 3. Format Report
-            String reportContent = ReportFormatter.generateReport(products, analyzer);
+            String report = ReportFormatter.generateReport(products, analyzer);
 
             // 4. Output Data using Factory
             OutputStrategy strategy = OutputStrategyFactory.getStrategy(arguments.getOutputMethod());
 
-            strategy.output(reportContent,arguments.getOutputFilePath());
-
-
+            strategy.output(report,arguments.getOutputFilePath());
 
         } catch (Exception e){
             System.err.println("Error generating report: " + e.getMessage());
